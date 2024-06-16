@@ -404,7 +404,7 @@ footer ul li a:hover {
 }
 
 
-@media screen and(max-width: 1024px) {
+@media only screen and (max-width: 1024px) {
   .container {
     width: var(--container-width-md);
   }
@@ -423,5 +423,151 @@ footer ul li a:hover {
 
   h4 {
     font-size: 1.2rem;
+  }
+
+  nav button {
+    display: inline-block;
+    background: transparent;
+    font-size: 1.8rem;
+    color: var(--color-white);
+    cursor: pointer;
+  }
+
+  /* #close-menu-btn {
+    display: none;
+  } */
+
+  .nav__menu {
+    position: fixed;
+    top: 5rem;
+    right: 5%;
+    height: fit-content;
+    width: 18rem;
+    flex-direction: column;
+    gap: 0;
+    display: none;
+  }
+
+  .nav__menu li {
+    width: 100%;
+    height: 5.8rem;
+  }
+
+  .nav__menu li a {
+    background: var(--color-primary);
+    box-shadow: -4rem 6rem 10rem rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+  }
+
+  .nav__menu li a:hover {
+    background: var(--color-bg2);
+    color: var(--color-white);
+  }
+
+  header {
+    height: 52vh;
+    margin-bottom: 4rem;
+  }
+
+  .header__container {
+    gap: 0;
+    padding-bottom: 3rem;
+  }
+
+  .categories {
+    height: auto;
+  }
+
+  .categories__container {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .categories__left {
+    margin-right: 0;
+  }
+
+  .courses {
+    margin-top: 0;
+  }
+
+  .courses__container {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .faqs__container {
+    grid-template-columns: 1fr;
+  }
+
+  .faq {
+    padding: 1.5rem;
+  }
+
+  .footer__container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    width: var(--container-width-sm);
+  }
+
+  .nav__menu {
+    right: 3%;
+  }
+
+  header {
+    height: 100vh;
+  }
+
+  .header__container {
+    grid-template-columns: 1fr;
+    text-align: center;
+    margin-top: 0;
+  }
+
+  .header__left p {
+    margin-bottom: 1.3rem;
+  }
+
+  .categories__right {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.7rem;
+  }
+
+  .category {
+    padding: 1rem;
+    border-radius: 1rem;
+  }
+
+  .category__icon {
+    margin-top: 4px;
+    display: inline-block;
+  }
+
+  .courses__container {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonial__body {
+    padding: 1.2rem;
+  }
+
+  .footer__container {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  .footer__1 p {
+    margin: 1rem auto;
+  }
+
+  .footer__socials {
+    justify-content: center;
   }
 }
